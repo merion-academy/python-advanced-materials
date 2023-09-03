@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "5672:5672"
+      - "8080:15672"
+    volumes:
+      - rmq-data:/var/lib/rabbitmq
+
+volumes:
+  rmq-data:
